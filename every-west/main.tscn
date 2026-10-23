@@ -2,13 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://3ghwwo3k4a3x" path="res://313426.jpg" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cfs1of38lf4er" path="res://gun.tscn" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bo11ng5axm284" path="res://crosshair.png" id="3_h2yge"]
 
 [node name="Node2D" type="Node2D" unique_id=1836250781]
 
 [node name="313426" type="Sprite2D" parent="." unique_id=1184746933]
+texture_filter = 1
 position = Vector2(575, 215)
 texture = ExtResource("1_ig7tw")
 
 [node name="gun" parent="." unique_id=437090008 instance=ExtResource("2_0xm2m")]
-position = Vector2(1038, 517)
+position = Vector2(1038, 547)
 scale = Vector2(3, 3)
+
+[node name="Crosshair" type="Sprite2D" parent="." unique_id=955700116]
+texture_filter = 1
+position = Vector2(280.00006, 464.00003)
+scale = Vector2(3, 3)
+texture = ExtResource("3_h2yge")
