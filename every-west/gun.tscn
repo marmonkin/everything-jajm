@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cfs1of38lf4er"]
+
+[ext_resource type="Texture2D" uid="uid://dc6kb17xrkt0i" path="res://gun.png" id="1_dk5gl"]
+[ext_resource type="Texture2D" uid="uid://cj3orhlsk7tou" path="res://bulit.png" id="2_kw0bs"]
+
+[node name="gun" type="Node2D" unique_id=437090008]
+
+[node name="Gun" type="Sprite2D" parent="." unique_id=409765394]
+texture = ExtResource("1_dk5gl")
+
+[node name="Bulit" type="Sprite2D" parent="." unique_id=1717372719]
+position = Vector2(0, -20)
+texture = ExtResource("2_kw0bs")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1929195329]
+position = Vector2(0, -20)
