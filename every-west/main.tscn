@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cxqxygtcemr1g"]
 
 [ext_resource type="Texture2D" uid="uid://3ghwwo3k4a3x" path="res://313426.jpg" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://dc6kb17xrkt0i" path="res://gun.png" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cfs1of38lf4er" path="res://gun.tscn" id="2_0xm2m"]
 
 [node name="Node2D" type="Node2D" unique_id=1836250781]
 
@@ -9,7 +9,6 @@
 position = Vector2(575, 215)
 texture = ExtResource("1_ig7tw")
 
-[node name="Gun" type="Sprite2D" parent="." unique_id=1012094846]
-position = Vector2(555, 518)
-scale = Vector2(4, 4)
-texture = ExtResource("2_0xm2m")
+[node name="gun" parent="." unique_id=437090008 instance=ExtResource("2_0xm2m")]
+position = Vector2(1038, 517)
+scale = Vector2(3, 3)
