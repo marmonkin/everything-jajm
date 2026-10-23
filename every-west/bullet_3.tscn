@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cwvbk65hps74e"]
+
+[ext_resource type="Script" uid="uid://c0s1ke0xnyu35" path="res://conveyor.gd" id="1_qoblx"]
+[ext_resource type="Texture2D" uid="uid://cj3orhlsk7tou" path="res://bulit.png" id="2_4u4nt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yxjq"]
+size = Vector2(51, 132)
+
+[node name="Bullet3" type="Node2D" unique_id=1040081204 node_paths=PackedStringArray("belt")]
+script = ExtResource("1_qoblx")
+belt = NodePath("")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1495609907]
+position = Vector2(-20, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=346423873]
+position = Vector2(2, -1)
+shape = SubResource("RectangleShape2D_8yxjq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=467924666]
+position = Vector2(0.5, 1)
+scale = Vector2(3.4375, 8.25)
+texture = ExtResource("2_4u4nt")

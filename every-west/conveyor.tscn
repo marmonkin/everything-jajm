@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cwr0sy3sv63ke"]
+
+[ext_resource type="PackedScene" uid="uid://cwvbk65hps74e" path="res://bullet_3.tscn" id="1_m44ft"]
+[ext_resource type="Texture2D" uid="uid://lejju1paxii3" path="res://conveyorbelt.png" id="1_nyola"]
+[ext_resource type="Script" uid="uid://d4iy73ys4caf4" path="res://spawner.gd" id="4_m44ft"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucsmb"]
+size = Vector2(1152, 202)
+
+[node name="Conveyor" type="Node2D" unique_id=846669754]
+
+[node name="Belt2" type="StaticBody2D" parent="." unique_id=1662298589]
+z_index = -1
+position = Vector2(577, 551)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Belt2" unique_id=1141520722]
+shape = SubResource("RectangleShape2D_ucsmb")
+
+[node name="Sprite2D" type="Sprite2D" parent="Belt2" unique_id=1870600867]
+position = Vector2(27, 5)
+scale = Vector2(9.4765625, 3.765625)
+texture = ExtResource("1_nyola")
+
+[node name="Spawner" type="Node2D" parent="." unique_id=1905668776]
+position = Vector2(1061, 551)
+script = ExtResource("4_m44ft")
+bullet_3 = ExtResource("1_m44ft")
+
+[node name="Timer" type="Timer" parent="Spawner" unique_id=1513857168]
+autostart = true
+
+[connection signal="timeout" from="Spawner/Timer" to="Spawner" method="_on_timer_timeout"]
